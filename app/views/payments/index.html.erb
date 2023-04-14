@@ -1,0 +1,16 @@
+<p>訂單號碼：<%= @order.id %></p>
+<p>訂單金額：<%= @order.amount %></p>
+<p>收件人：<%= @order.user_name %></p>
+<p>收件人地址：<%= @order.user_address %></p>
+<p>收件人電話：<%= @order.user.phone %></p>
+
+
+<%= form_tag order_path(@order), method: :patch, style: "display: inline-block" do %>
+  <%= hidden_field_tag :payment_method, "credit_card" %>
+  <%= submit_tag "信用卡付款", class: "btn btn-primary" %>
+<% end %>
+
+<%= form_tag order_path(@order), method: :patch, style: "display: inline-block" do %>
+  <%= hidden_field_tag :payment_method, "convenience_store" %>
+  <%= submit_tag "超商付款", class: "btn btn-primary" %>
+<% end %>

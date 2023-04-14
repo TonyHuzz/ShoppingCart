@@ -1,0 +1,58 @@
+<div>
+  <h3>購物車商品</h3>
+  <% @buy_now_items.each_with_index do |item| %>
+    <ul>
+      <li>
+        <p>
+          <%= "#{}: #{item.product_name}" %>
+        </p>
+        <p>
+          <%= "單品價格:  #{item.product_price}" %>
+        </p>
+        <p>
+          <%= form_for item, method: :patch do |f| %>
+            <%= f.label :name, "購買數量: " %>
+            <%= f.number_field :quantity, min: 1, max: 10 %><br/>
+            <%= f.submit "更新", class: "btn btn-primary" %>
+          <% end %>
+        </p>
+        <div>
+          <%= link_to "刪除", cart_item_path(item), method: :delete, class: "btn btn-danger", data: { confirm: "確定要刪除商品嗎?"} %>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+</div>
+<hr/>
+<p>總價:   <%= @amount || 0 %></p>
+<%= form_tag orders_path, method: :post do %>
+  <%= submit_tag "確定購買", class: "btn btn-success"%>
+<% end %>
+<hr/>
+<div>
+  <h3>下次購買商品</h3>
+  <% @buy_next_time_items.each_with_index do | item| %>
+    <ul>
+      <li>
+        <p>
+          <%= "#{}: #{item.product_name}" %>
+        </p>
+        <p>
+          <%= "單品價格:  #{item.product_price || 0}" %>
+        </p>
+        <p>
+        <p>
+          <%= form_for item, method: :patch do |f| %>
+            <%= f.label :name, "購買數量: " %>
+            <%= f.number_field :quantity, min: 1, max: 10 %><br/>
+            <%= f.submit "更新", class: "btn btn-primary" %>
+          <% end %>
+        </p>
+        <div>
+          <%= link_to "刪除", cart_item_path(item), method: :delete, class: "btn btn-danger", data: { confirm: "確定要刪除商品嗎?"} %>
+        </div>
+        </p>
+      </li>
+    </ul>
+  <% end %>
+</div>

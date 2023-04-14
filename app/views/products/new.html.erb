@@ -1,0 +1,43 @@
+<h3>新增產品</h3>
+<%= form_for @product, method: :post do |f| %>
+  <%= f.label :name, "名稱" %>
+  <%= f.text_field :name %><br/>
+
+  <%= f.label :description, "敘述" %>
+  <%= f.text_field :description %><br/>
+
+  <%= f.label :image, "圖片" %><br/>
+  <%= image_tag (@product.image_url.url || "https://placehold.co/300x200"), size: "300x200", id: "target", original_url: @product.image_url %><br/>
+  <%= f.file_field :image, accept: "image/gif, image/jpeg, image/png" %><br/>
+
+  <%= f.label :price, "價格" %>
+  <%= f.number_field :price %><br/>
+
+  <%= f.label :subcategory_id, "副類別" %>
+  <%= f.select("subcategory_id", Subcategory.all.collect {|s| [s.name_with_category, s.id] }, {include_blank: "請選擇"}) %><br/>
+
+  <%= f.submit "新增" %>
+<% end %>
+
+
+<script>
+    $(function (){
+        $("#product_image").change(function (){
+            readURL(this, "target");                      //this 代表input file，就是你所選擇上傳的檔案本身
+        });
+
+        function readURL(input, image_tag_id){
+            if(input.files && input.files[0]){
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    $("#" + image_tag_id).attr('src', event.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+            else {
+                var original_url = $("#" + image_tag_id).attr("original_url")
+                $("#" + image_tag_id).attr('src', original_url);
+            }
+        }
+    });
+</script>

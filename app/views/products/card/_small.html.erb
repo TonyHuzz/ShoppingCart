@@ -1,0 +1,19 @@
+<div class="thumbnail">
+  <%= link_to product_path(product) do %>
+    <%= image_tag (product.image_url.url || "https://placehold.co/300x200") %>
+  <% end %>
+  <div class="caption">
+    <%= link_to product_path(product) do %>
+      <h3><%= "#{product.id}. #{product.name}" %></h3>
+    <% end %>
+    <p><%= product.description %></p>
+    <p>類別:<%= product.subcategory.try(:name_with_category) %></p>
+    <p>價錢:<%=product.price %></p>
+    <% if current_user && current_user.is_admin? %>
+      <div>
+        <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
+        <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-danger", data: {confirm: "確定要刪除嗎?"} %>
+      </div>
+    <% end %>
+  </div>
+</div>

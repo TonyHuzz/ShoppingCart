@@ -1,0 +1,11 @@
+<div>
+  <h2>所有訂單</h2>
+  <ul>
+    <% @orders.each do |order| %>
+      <li>
+        <%= "訂單號碼: #{order.id}, 訂購人: #{order.user_name} 訂單狀態: #{order.status}, 總價: #{order.amount}" %>
+        <%= link_to "查看", order_path(order) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

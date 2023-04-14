@@ -1,0 +1,14 @@
+<div>
+  <h2>所有訂單</h2>
+  <ul>
+    <% @orders.each do |order| %>
+      <li>
+        <%= "訂單號碼: #{order.id}, 訂單狀態: #{order.status}, 總價: #{order.amount}" %>
+        <%= link_to "查看", order_path(order) %>
+        <% if order.not_paid? %>
+          <%= link_to "去付款", payments_path(order_id: order.id) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
