@@ -7,24 +7,29 @@
 ◆ rails_admin   > 用於快速產生後台 <br/>
 ◆ carrierwave   > 用於圖檔上傳     <br/>
 ◆ devise        > 用於快速建立會員系統   <br/>
+◆ pg            > 用於將本地資料庫更改為Postgresql
 
 
-Things you may want to cover:
+因為這是一個練習，所以做得稍微簡單一點，沒有太多複雜的功能
 
-* Ruby version
+## 畫面展示
 
-* System dependencies
+★ 首頁
+<img src="https://imgur.com/a/o7IXdry" title="source: imgur.com" />
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+★ 點擊商品至商品個別頁面
+<img src="https://imgur.com/a/UoZA27x" title="source: imgur.com" />
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+★ 點擊加入購物車即可到購物車頁面查看該商品
+<img src="https://imgur.com/a/AutP8f9" title="source: imgur.com" />
 
-* Deployment instructions
 
-* ...
+★ 點擊確認購買即可到查看訂單頁面付款
+<img src="https://imgur.com/a/7EDEHdV" title="source: imgur.com" />
+
+
+★ 會員判斷為管理員則可對商品進行編輯或刪除動作
+<img src="https://imgur.com/a/icwUi9c" title="source: imgur.com" />
