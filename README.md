@@ -20,16 +20,16 @@
 
 
 ★ 點擊商品至商品個別頁面
-<img src="https://imgur.com/a/UoZA27x" title="source: imgur.com" />
+<img src="https://i.imgur.com/Oh8sOEe.png" title="source: imgur.com" />
 
 
 ★ 點擊加入購物車即可到購物車頁面查看該商品
-<img src="https://imgur.com/a/AutP8f9" title="source: imgur.com" />
+<img src="https://i.imgur.com/sh2TsP8.png" title="source: imgur.com" />
 
 
 ★ 點擊確認購買即可到查看訂單頁面付款
-<img src="https://imgur.com/a/7EDEHdV" title="source: imgur.com" />
+<img src="https://i.imgur.com/ewlgrLa.png" title="source: imgur.com" />
 
 
 ★ 會員判斷為管理員則可對商品進行編輯或刪除動作
-<img src="https://imgur.com/a/icwUi9c" title="source: imgur.com" />
+<img src="https://i.imgur.com/a418T6t.png" title="source: imgur.com" />
