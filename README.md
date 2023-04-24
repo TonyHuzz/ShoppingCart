@@ -15,8 +15,7 @@
 ## 畫面展示
 
 ★ 首頁
-<a href="https://imgur.com/r0Vfet3"><img src="https://i.imgur.com/r0Vfet3.png" title="source: imgur.com" /></a>
-<img src="https://imgur.com/a/o7IXdry" title="source: imgur.com" />
+<a href="https://imgur.com/a/o7IXdry"><img src="https://imgur.com/ewlgrLa" title="source: imgur.com" /></a>
 
 
 
