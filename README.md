@@ -4,9 +4,9 @@
 
 ## 使用到的Gem
 
-◆ rails_admin   > 用於快速產生後台
-◆ carrierwave   > 用於圖檔上傳
-◆ devise        > 用於快速建立會員系統
+◆ rails_admin   > 用於快速產生後台 <br/>
+◆ carrierwave   > 用於圖檔上傳     <br/>
+◆ devise        > 用於快速建立會員系統   <br/>
 
 
 Things you may want to cover:
